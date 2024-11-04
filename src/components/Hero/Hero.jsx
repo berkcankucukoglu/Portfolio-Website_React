@@ -1,5 +1,6 @@
 import { HERO_CONTENT, USER_INFO } from '../../constants/index';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -69,15 +70,14 @@ const Hero = () => {
             {HERO_CONTENT[1].text}
           </motion.p>
           <div className='flex flex-col w-full lg:w-auto lg:flex-row gap-4 lg:gap-8'>
-            <motion.a
-              variants={childVariants}
-              title="More information about me"
-              href="/"
-              rel="noref"
-              className="bg-white rounded-full p-4 my-4 text-sm sm:text-base font-bold text-stone-800 text-center transform transition-transform duration-300 hover:scale-110"
-            >
-              More About Me
-            </motion.a>
+            <Link to='/about'>
+              <motion.p
+                variants={childVariants}
+                className='bg-white rounded-full p-4 my-4 text-sm sm:text-base font-bold text-stone-800 text-center transform transition-transform duration-300 hover:scale-110'
+                title="More information about me">
+                More About Me
+              </motion.p>
+            </Link>
             <motion.a
               variants={childVariants}
               title="Get Berkcan's Latest Resume"
