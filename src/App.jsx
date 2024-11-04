@@ -4,8 +4,8 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Project from './components/Projects/Project';
 import Footer from './components/Footer/Footer';
-import Technologies from './components/Technologies/Technologies';
 import Mission from './components/Mission/Mission';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
   return (
@@ -20,12 +20,13 @@ const App = () => {
         <Navbar />
         <Hero />
         <Mission />
-        <Technologies />
         <Experience />
         <Project />
         <Contact />
         <Footer />
       </div>
+
+      <BackToTop />
     </div>
   );
 };
