@@ -1,21 +1,24 @@
 import { LINKS } from '../../constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf, faSquareEnvelope, faHouseUser } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import {
+  faFilePdf,
+  faSquareEnvelope,
+  faHouseUser,
+} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <motion.nav
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="flex items-center justify-between py-10"
-    >
+    <nav className="flex items-center justify-between py-10">
       <div className="flex flex-shrink-0 items-center">
-        <a title="Home" rel="noref" className='transform transition-transform duration-300 hover:scale-110' href="/" aria-label="Home">
-          <FontAwesomeIcon icon={faHouseUser} size='2xl' />
-        </a>
+        <Link
+          to="/"
+          title="Home"
+          className="transform transition-transform duration-300 hover:scale-110"
+        >
+          <FontAwesomeIcon icon={faHouseUser} size="2xl" />
+        </Link>
       </div>
 
       <div className="flex items-center justify-center gap-4">
@@ -26,7 +29,7 @@ const Navbar = () => {
           target="_blank"
           aria-label="LinkedIn"
           rel="noref"
-          className='transform transition-transform duration-300 hover:scale-110'
+          className="transform transition-transform duration-300 hover:scale-110"
         >
           <FontAwesomeIcon icon={faLinkedin} size="2xl" />
         </a>
@@ -38,7 +41,7 @@ const Navbar = () => {
           target="_blank"
           aria-label="Github"
           rel="noref"
-          className='transform transition-transform duration-300 hover:scale-110'
+          className="transform transition-transform duration-300 hover:scale-110"
         >
           <FontAwesomeIcon icon={faSquareGithub} size="2xl" />
         </a>
@@ -49,7 +52,7 @@ const Navbar = () => {
           href="/contact_me"
           aria-label="Email"
           rel="noref"
-          className='transform transition-transform duration-300 hover:scale-110'
+          className="transform transition-transform duration-300 hover:scale-110"
           onClick={(e) => {
             e.preventDefault();
             const getInTouchElement = document.getElementById('contactsection');
@@ -67,7 +70,7 @@ const Navbar = () => {
           href="/download_resume"
           aria-label="Resume/CV"
           rel="noref"
-          className='transform transition-transform duration-300 hover:scale-110'
+          className="transform transition-transform duration-300 hover:scale-110"
           onClick={(e) => {
             e.preventDefault();
             const confirmDownload = window.confirm(
@@ -86,7 +89,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faFilePdf} size="2xl" />
         </a>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

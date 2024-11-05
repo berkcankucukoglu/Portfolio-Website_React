@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'input-gray': `#32323c`,
+        'overlay-background': `#313131`,
       },
     },
   },

@@ -12,7 +12,7 @@ export const USER_INFO = {
   email: 'berkcankucukoglu@gmail.com',
   image: profilePicture,
   title: 'Full Stack Developer',
-  lastUpdateTime: `02 Nov 2024`,
+  siteLastUpdateTime: `02 Nov 2024`,
 };
 
 export const LINKS = [
@@ -104,6 +104,17 @@ export const CONTACT_TEXT = `If you didn’t find the information you’re looki
 
 export const FOOTER_CONTENT = `“Victory is for those who can say "Victory is mine". Success is for those who can begin saying "I will succeed" and say "I have succeeded" in the end.”`;
 export const FOOTER_AUTHOR = `Mustafa Kemal Atatürk: The First President and Founder of the Republic of Turkey.`;
+
+export const PRIVACRY_CONTENT = [
+  {
+    title: `Privacy Policy`,
+    text: `Your privacy is important to me. This website does not collect sensitive personal data, but any information you provide through the contact form will be used solely for communication related to professional inquiries. Misuse of this site’s contact options, including sending irrelevant or excessive messages, may lead to blocked communications to ensure a respectful exchange. Please reach out with genuine interest and respect for privacy.`,
+  },
+  {
+    title: `Terms of Service`,
+    text: `This website is designed to showcase my professional experience and skills. By using this site, you agree to engage respectfully and appropriately. Any attempts to misuse this platform, such as sending irrelevant or abusive messages, will result in restricted communication access. I reserve the right to block any communication channels to maintain a productive environment.`,
+  },
+];
 
 export const CURRENT_DATE = {
   formattedDate: getFormattedDate(),

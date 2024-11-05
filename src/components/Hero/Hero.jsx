@@ -38,48 +38,39 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
+        <div
           className="flex flex-col items-center lg:items-start mt-10"
         >
-          <motion.h2
-            variants={childVariants}
+          <h2
             className="pb-2 text-4xl tracking-tighter sm:text-5xl lg:text-6xl xl:text-7xl"
           >
             {USER_INFO.name + ' ' + USER_INFO.surname}
-          </motion.h2>
-          <motion.span
-            variants={childVariants}
+          </h2>
+          <span
             className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
           >
             {' '}
             {USER_INFO.title}
-          </motion.span>
-          <motion.p
-            variants={childVariants}
+          </span>
+          <p
             className="my-2 sm:my-0 sm:mt-2 max-w-lg py-6 sm:py-0 sm:pt-6 text-sm  lg:text-base leading-relaxed"
           >
             {HERO_CONTENT[0].text}
-          </motion.p>
-          <motion.p
-            variants={childVariants}
+          </p>
+          <p
             className="mb-2 mt-1 max-w-lg pb-6 text-sm lg:text-base leading-relaxed hidden sm:block"
           >
             {HERO_CONTENT[1].text}
-          </motion.p>
+          </p>
           <div className='flex flex-col w-full lg:w-auto lg:flex-row gap-4 lg:gap-8'>
-            <Link to='/about'>
-              <motion.p
-                variants={childVariants}
-                className='bg-white rounded-full p-4 my-4 text-sm sm:text-base font-bold text-stone-800 text-center transform transition-transform duration-300 hover:scale-110'
+            <Link to='/about' className='flex flex-col rounded-full transform transition-transform duration-300 hover:scale-110'>
+              <span
+                className='bg-white rounded-full p-4 my-4 text-center text-sm sm:text-base font-bold text-stone-800'
                 title="More information about me">
                 More About Me
-              </motion.p>
+              </span>
             </Link>
-            <motion.a
-              variants={childVariants}
+            <a
               title="Get Berkcan's Latest Resume"
               href="/download_resume"
               rel="noref"
@@ -100,9 +91,9 @@ const Hero = () => {
               }}
             >
               Download Resume
-            </motion.a>
+            </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

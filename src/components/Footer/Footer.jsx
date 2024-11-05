@@ -9,6 +9,8 @@ import {
     CURRENT_DATE
 } from '../../constants/index';
 import { motion } from 'framer-motion';
+import TermsPage from '../../pages/TermsAndPrivacy/TermsPage';
+import PrivacyPage from '../../pages/TermsAndPrivacy/PrivacyPage'
 
 const Footer = () => {
     return (
@@ -102,21 +104,8 @@ const Footer = () => {
 
             <div className="flex flex-col justify-between lg:flex-row-reverse sm:mt-5">
                 <div className="flex flex-col justify-between items-center mb-3 sm:flex-row">
-                    <a
-                        className="text-sm leading-relaxed text-center w-max px-2 my-1 text-stone-500 sm:my-0 transform transition-transform duration-300 hover:scale-110"
-                        href="/"
-                    >
-                        User Privacy Policy
-                    </a>
-                    <a
-                        className="text-sm leading-relaxed text-center w-max px-2 my-1 text-stone-500 sm:my-0 transform transition-transform duration-300 hover:scale-110"
-                        href="/"
-                    >
-                        Terms of Service
-                    </a>
-                    <p className="text-sm font-bold leading-relaxed text-center w-max px-2 my-1 text-stone-500 sm:my-0">
-                        Last Update:&nbsp;{USER_INFO.lastUpdateTime}
-                    </p>
+                    <TermsPage></TermsPage>
+                    <PrivacyPage></PrivacyPage>
                 </div>
                 <motion.p
                     whileInView={{ opacity: 1 }}
@@ -124,7 +113,7 @@ const Footer = () => {
                     transition={{ duration: 0.5 }}
                     className="text-sm italic leading-relaxed tracking-tighter text-center text-stone-500 lg:text-start">
                     ©&nbsp;{CURRENT_DATE.year}&nbsp;Made by&nbsp;{USER_INFO.name}&nbsp;{USER_INFO.surname}. All rights
-                    reserved.
+                    reserved.&nbsp;<span className='font-bold not-italic'>Last Update:&nbsp;{USER_INFO.siteLastUpdateTime}</span>
                 </motion.p>
             </div>
         </div>

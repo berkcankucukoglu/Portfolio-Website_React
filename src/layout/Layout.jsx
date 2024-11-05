@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
@@ -23,7 +23,7 @@ function Layout({ children }) {
             </div>
             <BackToTop />
         </div>
-    )
+    );
 }
 
-export default Layout
+export default Layout;
