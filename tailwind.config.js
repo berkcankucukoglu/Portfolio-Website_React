@@ -6,6 +6,7 @@ export default {
       colors: {
         'input-gray': `#32323c`,
         'overlay-background': `#313131`,
+        'hover-notactive-blue': `#172554`,
       },
     },
   },

@@ -102,17 +102,36 @@ export const HERO_CONTENT = [
 
 export const CONTACT_TEXT = `If you didn’t find the information you’re looking for, feel free to reach out directly. I’m always open to discussing my work, experience, or any questions you might have.`;
 
+export const CONTACT_PRIVACRY = [
+  `Information provided through the contact form is to be used only and exclusively for professional communication.`,
+  `If offensive or irrelevant messages are received, I reserve the right to stop communicating with you or choose not to respond to your messages.`,
+  `For more information, please visit to Terms of Use and Privacy Policy pages down below.`,
+];
+
 export const FOOTER_CONTENT = `“Victory is for those who can say "Victory is mine". Success is for those who can begin saying "I will succeed" and say "I have succeeded" in the end.”`;
+
 export const FOOTER_AUTHOR = `Mustafa Kemal Atatürk: The First President and Founder of the Republic of Turkey.`;
 
 export const PRIVACRY_CONTENT = [
   {
     title: `Privacy Policy`,
-    text: `Your privacy is important to me. This website does not collect sensitive personal data, but any information you provide through the contact form will be used solely for communication related to professional inquiries. Misuse of this site’s contact options, including sending irrelevant or excessive messages, may lead to blocked communications to ensure a respectful exchange. Please reach out with genuine interest and respect for privacy.`,
+    text: ``,
+    listItems: [
+      `Your privacy is valued, and this site does not collect sensitive personal data.`,
+      `Information provided through the contact form will only be used for professional communication.`,
+      `Misuse of the contact options, including sending irrelevant or excessive messages, may result in restrictions on further communication attempts.`,
+      `Please reach out with genuine interest and respect for privacy.`,
+    ],
   },
   {
-    title: `Terms of Service`,
-    text: `This website is designed to showcase my professional experience and skills. By using this site, you agree to engage respectfully and appropriately. Any attempts to misuse this platform, such as sending irrelevant or abusive messages, will result in restricted communication access. I reserve the right to block any communication channels to maintain a productive environment.`,
+    title: `Terms of Use`,
+    text: ``,
+    listItems: [
+      `This website is intended to showcase my professional experience and skills.`,
+      `By using this website, you agree to using it in a polite and ethical manner.`,
+      `If offensive or irrelevant messages are received, I reserve the right to stop communicating with you or choose not to respond to your messages.`,
+      `I reserve the right to block any communication channels to maintain a productive environment.`,
+    ],
   },
 ];
 

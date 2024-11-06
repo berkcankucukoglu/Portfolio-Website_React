@@ -4,10 +4,64 @@ import {
   faSquarePhone,
   faSquareEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
-import { CONTACT_TEXT, USER_INFO } from '../../constants';
+import { CONTACT_TEXT, USER_INFO, CONTACT_PRIVACRY } from '../../constants';
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+
+
+const ContactInfo = () => {
+  return (
+    <>
+      {/* MailAddress */}
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -25 }}
+        transition={{ duration: 0.75 }}
+        className="flex items-center px-1 py-4"
+      >
+        <FontAwesomeIcon icon={faSquareEnvelope} size="2xl" />
+        <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
+          {USER_INFO.email}
+        </p>
+      </motion.div>
+
+      {/* Call */}
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -25 }}
+        transition={{ duration: 1 }}
+        className="flex items-center px-1 py-4"
+      >
+        <FontAwesomeIcon icon={faSquarePhone} size="2xl" />
+        <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
+          {USER_INFO.phoneNo}
+        </p>
+      </motion.div>
+
+      {/* Address */}
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -25 }}
+        transition={{ duration: 1.25 }}
+        className="flex items-center px-1 py-4"
+      >
+        <FontAwesomeIcon icon={faSquareFontAwesome} size="2xl" />
+        <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
+          {USER_INFO.address}
+        </p>
+      </motion.div>
+    </>
+  );
+};
 
 const Contact = () => {
+
+  const [show, setShow] = useState(false);
+
+  const toggleShow = () => {
+    setShow(!show);
+  };
+
   return (
     <div id="contactsection" className="my-16 sm:my-24">
       <motion.h2
@@ -19,46 +73,35 @@ const Contact = () => {
         Get In Touch
       </motion.h2>
       <div className="flex flex-col-reverse md:flex-row md:gap-16">
-        <div className="md:flex md:flex-col-reverse md:justify-end px-1">
+        <div className="md:flex md:flex-col-reverse md:justify-end px-1 md:w-1/2">
           <div>
-            {/* MailAddress */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -25 }}
-              transition={{ duration: 0.75 }}
-              className="flex items-center px-1 py-4"
-            >
-              <FontAwesomeIcon icon={faSquareEnvelope} size="2xl" />
-              <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
-                {USER_INFO.email}
-              </p>
-            </motion.div>
-
-            {/* Call */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -25 }}
-              transition={{ duration: 1 }}
-              className="flex items-center px-1 py-4"
-            >
-              <FontAwesomeIcon icon={faSquarePhone} size="2xl" />
-              <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
-                {USER_INFO.phoneNo}
-              </p>
-            </motion.div>
-
-            {/* Address */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -25 }}
-              transition={{ duration: 1.25 }}
-              className="flex items-center px-1 py-4"
-            >
-              <FontAwesomeIcon icon={faSquareFontAwesome} size="2xl" />
-              <p className="ml-2 my-2 max-w-lg w-full text-sm sm:text-lg leading-relaxed tracking-wide">
-                {USER_INFO.address}
-              </p>
-            </motion.div>
+            {show ? <ContactInfo /> :
+              <>
+                <motion.button
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  onClick={toggleShow}
+                  className="bg-white rounded-full p-4 mb-4 text-sm sm:text-base font-bold text-stone-800 text-center w-full md:w-auto transform transition-transform duration-300 hover:scale-110">
+                  Show Contact Information
+                </motion.button>
+                <motion.ul
+                  className='list-disc pl-5'
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1.25 }}
+                >
+                  {CONTACT_PRIVACRY.map((tech, index) => (
+                    <li
+                      className="text-sm italic leading-relaxed tracking-tighter text-stone-500 py-1"
+                      key={index}
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </motion.ul>
+              </>
+            }
           </div>
           <div className="mt-5 md:mt-0">
             <motion.h1
@@ -83,7 +126,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.75 }}
-          className="px-1 my-10 md:my-0"
+          className="px-1 my-10 md:my-0 md:w-1/2"
         >
           <form className="px-1 contact-form">
             <label className="text-lg leading-relaxed" htmlFor="nameInput">

@@ -102,8 +102,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-between lg:flex-row-reverse sm:mt-5">
-                <div className="flex flex-col justify-between items-center mb-3 sm:flex-row">
+            <div className="flex flex-col justify-between md:flex-row-reverse sm:mt-5">
+                <div className="flex flex-col justify-center items-center mb-3 sm:flex-row">
                     <TermsPage></TermsPage>
                     <PrivacyPage></PrivacyPage>
                 </div>
@@ -111,7 +111,7 @@ const Footer = () => {
                     whileInView={{ opacity: 1 }}
                     initial={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-sm italic leading-relaxed tracking-tighter text-center text-stone-500 lg:text-start">
+                    className="text-sm italic leading-relaxed tracking-tighter text-center text-stone-500 md:text-start">
                     ©&nbsp;{CURRENT_DATE.year}&nbsp;Made by&nbsp;{USER_INFO.name}&nbsp;{USER_INFO.surname}. All rights
                     reserved.&nbsp;<span className='font-bold not-italic'>Last Update:&nbsp;{USER_INFO.siteLastUpdateTime}</span>
                 </motion.p>

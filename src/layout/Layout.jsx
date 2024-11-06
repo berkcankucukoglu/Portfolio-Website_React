@@ -7,6 +7,7 @@ import BackToTop from '../components/BackToTop';
 function Layout({ children }) {
     return (
         <div className="overflow-x-hidden text-stone-300 antialiased">
+
             {/* background */}
             <div className="fixed inset-0 -z-10">
                 <div className="relative h-full w-full bg-slate-950">

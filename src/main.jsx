@@ -7,8 +7,6 @@ import LandingPage from './pages/LandingPage.jsx';
 import ProjectsPage from './pages/ProjectsPage.jsx';
 import MissionPage from './pages/MissionPage.jsx';
 import ResearchPage from './pages/ResearchPage.jsx';
-import TermsPage from './pages/TermsAndPrivacy/TermsPage.jsx';
-import PrivacyPage from './pages/TermsAndPrivacy/PrivacyPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,14 +28,6 @@ const router = createBrowserRouter([
   {
     path: 'research',
     element: <ResearchPage />,
-  },
-  {
-    path: 'terms',
-    element: <TermsPage />,
-  },
-  {
-    path: 'privacy',
-    element: <PrivacyPage />,
   },
 ]);
 

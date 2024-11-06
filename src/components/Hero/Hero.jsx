@@ -2,21 +2,6 @@ import { HERO_CONTENT, USER_INFO } from '../../constants/index';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.2,
-    },
-  },
-};
-const childVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } },
-};
-
 const Hero = () => {
   return (
     <div
